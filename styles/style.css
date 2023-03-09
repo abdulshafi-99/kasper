@@ -6,6 +6,7 @@
     --section-padding: 100px;
     --text-color: #777;
     --background-color: #1f2021;
+    --background-color-secondary: #121116;;
 }
 * {
     box-sizing: border-box;
@@ -482,3 +483,85 @@ header nav .search i {
     font-size: 13px;
 }
 /* end portfolio section */
+
+/* start about section */
+.about {
+    padding-top: var(--section-padding);
+    /* padding-bottom: var(--section-padding); */
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .about img {
+        width: 320px;
+    }
+}
+/* end about section */
+
+/* start about-bottom section */
+.about-bottom {
+    padding: var(--section-padding) 0;
+    background-color: var(--background-color-secondary);
+}
+.about-bottom .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.about-bottom .box {
+    flex-basis: 25%;
+    text-align: center;
+    padding: 40px;
+    background-color: var(--transparent-color);
+    color: white;
+}
+.about-bottom .box .icon {
+    position: relative;
+    width: 50px;
+    height: 28.87px;
+    background-color: #1F2021;
+    margin: 14.43px auto;
+    padding-top: 3px;
+}
+.about-bottom .box .icon::after,
+.about-bottom .box .icon::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+}
+.about-bottom .box .icon::after {
+    top: 100%;
+    width: 0;
+    border-top: 14.43px solid #1F2021;
+}
+.about-bottom .box .icon::before {
+    bottom: 100%;
+    border-bottom: 14.43px solid #1F2021;   
+}
+.about-bottom .box span {
+    display: block;
+    margin: 30px auto 20px;
+    font-weight: bold;
+    font-size: 50px;
+}
+.about-bottom .box p {
+    font-size: 13px;
+}
+@media (max-width: 991px) {
+    .about-bottom .box {
+        flex-basis: 50%;
+    }
+}
+@media (max-width: 768px) {
+    .about-bottom {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .about-bottom .box {
+        flex-basis: 100%;
+    }
+}
+/* end about-bottom section */
