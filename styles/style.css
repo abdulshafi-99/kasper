@@ -565,3 +565,109 @@ header nav .search i {
     }
 }
 /* end about-bottom section */
+
+/* start testimonials section */
+.testimonials {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.testimonials .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+@media (max-width: 992px) {
+    .testimonials .container {
+        flex-direction: column;
+    }
+}
+.testimonials .empolyes,
+.testimonials .skills {
+    text-align: center;
+    flex-basis: 40%;
+}
+.testimonials .empolyes h2,
+.testimonials .skills h2 {
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+.testimonials .empolyes > p,
+.testimonials .skills > p {
+    color: var(--text-color);
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+.testimonials .empolyes .box {
+    display: flex;
+    text-align: left;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+.testimonials .empolyes .box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.testimonials .empolyes .box .text {
+    border-bottom: 1px solid var(--text-color);
+}
+.testimonials .empolyes .box .text p {
+    line-height: 2;
+    font-size: 13px;
+    padding-bottom: 20px;
+}
+.testimonials .empolyes .box .text span {
+    display: block;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--text-color);
+    font-weight: 400;
+    text-align: right;
+    margin-bottom: 10px;
+}
+.testimonials .empolyes .toggle {
+    display: flex;
+    justify-content: center;
+}
+.testimonials .empolyes .toggle li {
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    margin: 0 5px;
+    transition-duration: var(--main-duration);
+}
+.testimonials .empolyes .toggle li:hover {
+    background-color: var(--main-color);
+}
+.testimonials .skills .box {
+    text-align: left;
+    margin-bottom: 30px;
+}
+.testimonials .skills .box .progress {
+    height: 25px;
+    width: 100%;
+    background-color: var(--text-color);
+    margin-top: 10px;
+}
+.testimonials .skills .box span:last-child::before { 
+    content: attr(data-progress);
+    position: absolute;
+    top: -40px;
+    right: -20px;
+    color: white;
+    font-size: 12px;
+    padding: 8px;
+    background-color: black;
+}
+.testimonials .skills .box span:last-child::after {
+    content: "";
+    position: absolute;
+    top: -13px;
+    right: -10px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: black transparent transparent transparent;
+}
+/* end testimonials section */
