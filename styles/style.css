@@ -390,3 +390,95 @@ header nav .search i {
     }
 }
 /* end servicies bottom section */
+
+/* start portfolio section */
+.portfolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.portfolio ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.portfolio ul li {
+    margin: 0 1px;
+    padding: 13px 20px;
+    font-size: 15px;
+    transition-duration: var(--main-duration);
+}
+.portfolio ul li:hover {
+    color: white;
+    background-color: var(--main-color);
+}
+.portfolio .box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.portfolio .box figure {
+    width: 300px;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.portfolio .box figure img {
+    max-width: 100%;
+}
+.portfolio .box figure > span {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition-duration: var(--main-duration);
+}
+.portfolio .box figure:hover > span {
+    top: 20px;
+}
+.portfolio .box figure > span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 2px;
+    background-color: white;
+}
+.portfolio .box figure > span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    width: 50px;
+    background-color: white;
+}
+.portfolio .box figure figcaption {
+    position: absolute;
+    bottom: -50%;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    transition-duration: var(--main-duration);
+}
+.portfolio .box figure:hover figcaption {
+    bottom: 0;
+}
+.portfolio .box figure figcaption h3 {
+    font-weight: normal;
+    font-size: 18px;
+}
+.portfolio .box figure figcaption span {
+    color: var(--main-color);
+    font-size: 13px;
+}
+/* end portfolio section */
