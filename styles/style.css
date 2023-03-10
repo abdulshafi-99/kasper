@@ -671,3 +671,225 @@ header nav .search i {
     border-color: black transparent transparent transparent;
 }
 /* end testimonials section */
+
+/* start quotes */
+.quotes {
+    background-color: var(--background-color);
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    color: white;
+    text-align: center;
+}
+.quotes p {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.7;
+}
+.quotes span {
+    display: block;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 14px;
+}
+/* end quotes */
+
+/* start pricing section */
+.pricing {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.pricing .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+}
+.pricing .container .box {
+    text-align: center;
+}
+.pricing .box .price {
+    padding: 20px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .box .price p {
+    text-transform: uppercase;
+    font-size: 24px;
+}
+.pricing .box .price .value {
+    font-size: 50px;
+    font-weight: 700;
+    padding: 10px 0 10px;
+    margin: 10px auto;
+    position: relative;
+}
+.pricing .box .price .value::before {
+    content: "$";
+    font-size: 20px;
+    font-weight: 400;
+    position: absolute;
+    top: 10px;
+    left: 30%;
+}
+.pricing .box .price .value::after {
+    content: "/MO";
+    font-size: 20px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 10px;
+    right: 20%;
+}
+.pricing .box .features {
+    margin: 10px;
+}
+.pricing .box .features li {
+    padding: 15px;
+    margin: 10px auto;
+    width: fit-content;
+}
+.pricing .box .features li:not(:last-of-type) {
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .buy {
+    padding: 20px;
+    border-top: 1px solid var(--main-color);
+}
+.pricing .buy span {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: 1px solid var(--main-color);
+}
+.pricing .contact {
+    text-align: center;
+    margin: 50px auto 0;
+}
+.pricing .contact p {
+    font-size: 20px;
+}
+.pricing .contact a {
+    color: white;
+    padding: 15px 30px;
+    margin: 20px auto;
+    background-color: var(--main-color);
+    display: block;
+    width: fit-content;
+}
+/* end pricing section */
+
+/* start subscribe section */
+.subscribe {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--background-color);
+}
+.subscribe .container {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.subscribe form {
+    display: flex;
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+}
+.subscribe form i {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+}
+.subscribe form input[type="email"] {
+    border: 1px solid white;
+    padding: 20px 20px 20px 60px;
+    width: 80%;
+    background-color: transparent;
+    caret-color: white;
+    color: white;
+    width: calc(100% - 130px);
+    border-right: none;
+}
+.subscribe form input[type="submit"] {
+    width: 130px;
+    color: white;
+    text-transform: uppercase;
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-left: none;
+    border-color: white;
+    /* border-left: none; */
+}
+.subscribe p {
+    line-height: 1.7;
+    margin-left: 50px;
+}
+
+@media (max-width: 991px) {
+    .subscribe .container {
+        flex-direction: column;
+    }
+    .subscribe p {
+        margin: 50px 0 0;
+    }
+}
+/* end subscribe section */
+
+/* start contact section */
+.contact {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.contact .container {
+    display: flex;
+    justify-content: space-between;
+}
+.contact form {
+    flex-basis: 70%;
+}
+.contact form .main-input {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+.contact form input[type="submit"] {
+    display: block;
+    margin-left: auto;
+    padding: 15px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    text-transform: uppercase;
+}
+.contact .info {
+    flex-basis: 25%;
+}
+.contact .info h4 {
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.contact .info h4:last-of-type {
+    margin-top: 90px;
+}
+.contact .info .phone {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: var(--text-color);
+}
+.contact .info address {
+    color: var(--text-color);
+    font-size: 15px;
+    line-height: 2;
+}
+
+@media (max-width: 768px) {
+    .contact .container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
+/* end contact section */
