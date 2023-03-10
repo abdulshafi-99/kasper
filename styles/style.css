@@ -893,3 +893,37 @@ header nav .search i {
     }
 }
 /* end contact section */
+
+/* start footer */
+footer {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    text-align: center;
+    color: white;
+    background-color: var(--background-color-secondary);
+}
+footer img {
+    margin-bottom: 20px;
+}
+footer p:not(.copyright) {
+    font-size: 22px;
+    width: fit-content;
+    padding: 30px;
+    margin: 20px auto;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+}
+footer .icons {
+    width: 200px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+}
+footer .copyright {
+    margin-top: 50px;
+}
+footer .copyright span {
+    color: var(--main-color);
+    font-weight: 700;
+}
+/* end footer */
